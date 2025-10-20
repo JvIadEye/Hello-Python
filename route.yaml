@@ -1,0 +1,10 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: simple-web-app-route
+spec:
+  to:
+    kind: Service
+    name: simple-web-app-service
+  port:
+    targetPort: 8080
